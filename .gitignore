@@ -1,0 +1,3 @@
+*.vscode
+*__pycache__
+atv2/q1/tarefas.json
