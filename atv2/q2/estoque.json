@@ -1,0 +1,22 @@
+[
+    {
+        "nome": "Madeira",
+        "quantidade": 50,
+        "preco": 5.0
+    },
+    {
+        "nome": "Cano PVC",
+        "quantidade": 100,
+        "preco": 27.0
+    },
+    {
+        "nome": "Trena metrica",
+        "quantidade": 10,
+        "preco": 25.0
+    },
+    {
+        "nome": "Caixa de ferramentas",
+        "quantidade": 30,
+        "preco": 15.0
+    }
+]
