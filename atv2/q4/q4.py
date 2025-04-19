@@ -14,17 +14,16 @@ def main():
         
         if comando == '1':
             nome_usuario = input("Nome de usuário: ").strip().lower()
-            senha_usuario = input("Senha de usuário: \n").strip()
+            senha_usuario = input("Senha de usuário: ").strip()
             usuario_existente = None
             for usuario in usuarios:
                 if usuario['nome'] == nome_usuario:
-                    usuario = usuario_existente
-                    
-            if usuario_existente and senha_usuario == usuario_existente['senha']:
+                    usuario_existente = usuario
+            if usuario_existente is not None and senha_usuario == usuario_existente['senha']:
                   usuario_logged = True
+                  print("Login realizado com sucesso!\n")
             else:
-                print("Nome de usuário ou(e) senha incorreto.")
-                
+                print("Nome de usuário ou(e) senha incorreto.")      
         elif comando == '2':
             while True:
                 nome_usuario = input("Informe o nome de usuário: ").strip()
@@ -44,6 +43,8 @@ def main():
             if not usuario_logged:
                 print("Você precisa estar logado para fazer uma transação.")
                 continue
+            
+            nome_usuario = input("Informe o nome de usuário: ").strip()
             
             while True:
                 valor_transacao = float(input("Informe o valor da transação: "))
@@ -65,7 +66,9 @@ def main():
                 'tipo': tipo_transacao
             }
             
+            print("Transação realizada com sucesso!")
             transacoes.append(transacao)
+            print("Transações:", transacoes)
             
             
 
